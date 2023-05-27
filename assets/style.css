@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&family=Roboto&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Noto Sans', 'Roboto', sans-serif;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#time-entrada{
+    position: absolute;
+    z-index: 5;
+    width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: entrada-e-saida 2s ease;
+}
+
+@keyframes entrada-e-saida {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 300px;
+  }
+  80% {
+    opacity: 1;
+    width: 300px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    background-color: #11f76b;
+    padding: 10px;
+    position: relative;
+    border-radius: 0 0 15px 15px;
+    z-index: 2;
+}
+.main-login {
+    width: 100%;
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 3;
+    padding: 20px;
+}
+
+.right-login{
+    width: 49vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-login > img{
+    width: 15vw;
+    top: 2%;    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.card-register{
+    max-width: 400px;
+    background-color: #53086ed8;
+    padding: 35px 60px;
+    border-radius: 20px;
+}
+.card-register input[type="submit"]{
+    background-color: #11f76b;
+    color: #53086e;
+    width: 80%;
+    margin-top: 15px;
+    height: 40px;
+}
+.card-register input[type="submit"]:hover{
+    box-shadow: -5px 5px 0px 0px #fff;
+}
+.right-login h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.right-login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-login form input{
+  margin-bottom: 10px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.right-login form input:focus{
+    outline: none;
+    box-shadow: -3px 2px 0px 0px #11f76b;
+    cursor: text;
+  }
+ .right-login form input:hover{
+    outline: none;
+    box-shadow: -3px 2px 0px 0px #11f76b;
+    cursor: pointer;
+}
+.right-login form label{
+    color: #fff;
+    margin-bottom: 2px;
+}
+.left-login{
+    padding: 30px;
+    width: 49vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left-login img{
+    cursor: pointer;
+    width: 400px;
+}
+.left-login > h1{
+    color: #53086ed8;
+    font-weight: 800;
+    text-align: center;
+    font-size: 3vw;
+}
+.animation-tabela{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    z-index: 4;
+}
+.footer{
+    background-color: #53086e;
+    height: auto;
+    width: 100%;
+    z-index: -1;
+    padding: 10px;
+    margin-top: -15px;
+}   
+
+.footer > h1{
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    font-size: 15px;
+    transition: 0.2s
+}
+
+.footer a:hover{
+    color: #11f76b;
+}
+
+.main-login, .right-login, .left-login, .animation-tabela{
+    opacity: 0;
+    animation: entrada 3s ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes entrada {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
